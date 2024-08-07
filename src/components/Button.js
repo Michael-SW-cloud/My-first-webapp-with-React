@@ -1,13 +1,11 @@
 import React from "react";
 
-const handelClick = () => {
-  console.log("button clicked!")
-}
+
 
 const Button = ({ label, onClick }) => {
   return (
     <div className="div-button">
-      <button variant="contained" onClick={handelClick} className="button">
+      <button variant="contained" onClick={onClick} className="button">
         {label}
       </button>
     </div>
