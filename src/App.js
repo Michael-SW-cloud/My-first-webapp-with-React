@@ -11,9 +11,11 @@ function App() {
             alt="Logo"
           />
         </div>
+
         <div className="demo-text">
           <p>Demo-text</p>
         </div>
+        
       </div>
       <div className="field-text">
         <input type="text" className="input-text" />
