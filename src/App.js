@@ -3,21 +3,28 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+
+      
+        <div className='logo'>
+          <img
+            src="https://consider-it.de/wp-content/uploads/2024/06/CIT-horizontal-V1-20240221.svg"
+            alt="Logo"
+          />
+        </div>
+        <div className='demo-text'>
+          <p>Demo-text</p>
+        </div>
+      </div>
+      <div className='field-text'>
+          <input type='text' className='input-text'/>
+      </div>
+
+      <div className='div-go-button'>
+        <button className='go-button'>GO</button>
+      </div>
+
     </div>
   );
 }
