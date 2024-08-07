@@ -18,9 +18,8 @@ body{
 .field-text{
   border: 1px solid black;
   border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 40px;
+margin: 40px 20px 0px 20px; 
+  
 }
 .input-text{
   width:100%;
@@ -29,8 +28,7 @@ body{
 
 .div-button{
   border: 1px solid black;
-  margin: 30px 20px 10px 20px; 
-  margin: 30px 20px 10px 20px; 
+  margin: 30px 20px 10px 20px;
   width: 200px;
   height: 70px;
   }
