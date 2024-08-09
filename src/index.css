@@ -15,15 +15,18 @@ body{
  overflow: hidden;
  margin: 0px 20px 40px 20px; 
 }
-.field-text{
+.div-field-text{
   border: 1px solid black;
   border-radius: 10px;
 margin: 40px 20px 0px 20px; 
+background-color: white;
   
 }
-.input-text{
+.field-text{
   width:100%;
   height: 60px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .div-button{

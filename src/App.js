@@ -1,9 +1,18 @@
 import Button from './components/Button';
-const handelClick = () => {
-  console.log("button clicked!");
-};
+import TextField from './components/TextField';
+import React, {useState} from "react"
+
+import axios from "axios";
 
 function App() {
+  const [showText, setshowText] = useState("");
+  const URL = "https://hello-world.debug.citscloud.de/";
+  const handelClick = () => {
+    
+    axios.get(URL)
+    .then((response) => setshowText(response.data));
+  };
+
   return (
     <div>
       <div className="logo">
@@ -17,8 +26,8 @@ function App() {
         <p>Demo-text</p>
       </div>
 
-      <div className="field-text">
-        <input type="text" className="input-text" />
+      <div>
+        <TextField text={showText} />
       </div>
 
       <Button label={"ok"} onClick={handelClick} />
