@@ -1,17 +1,17 @@
 import Button from './components/Button';
 import TextField from './components/TextField';
 import React, {useState} from "react"
-import { useEffect } from "react";
+
 import axios from "axios";
 
 function App() {
-  const [showText, setshowText] = useState(false);
+  const [showText, setshowText] = useState("");
   const URL = "https://hello-world.debug.citscloud.de/";
-const handelClick = () => {
   const handelClick = () => {
-    setshowText(showText === "Submit" ? "Button gedrückt" : "Submit");
+    
+    axios.get(URL)
+    .then((response) => setshowText(response.data));
   };
-};
 
   return (
     <div>
@@ -27,7 +27,7 @@ const handelClick = () => {
       </div>
 
       <div>
-        <TextField text={"teset"}/>
+        <TextField text={showText} />
       </div>
 
       <Button label={"ok"} onClick={handelClick} />
