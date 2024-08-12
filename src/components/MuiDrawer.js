@@ -1,6 +1,8 @@
-import { Drawer, Box, Typography, IconButton } from "@mui/material";
-
+import { Drawer, Box, Typography, IconButton, MenuItem, ListItem, ListItemIcon } from "@mui/material";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { TfiAlignJustify } from "react-icons/tfi";
+import HomePage from "./HomePage";
+import Settings from "./Settings";
 import { useState } from "react";
 const MuiDrawer = () => {
     const [isDrwaerOpen,setIsDrwerOpen] =useState(false)
@@ -21,11 +23,19 @@ const MuiDrawer = () => {
           onClose={() => setIsDrwerOpen(false)}
         >
           <Box p={2} width="250px" textAlign="center" role="presentation">
-            <Typography variant="h6" component="div">
-              Side Panel
-            </Typography>
+            <div className="div-nav-element">
+              <Link to="/">Dashboard</Link>
+            </div>
+            <div className="div-nav-element">
+              <Link to="/Setting"> Settings</Link>
+            </div>
           </Box>
         </Drawer>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Setting" element={<Settings />} />
+        </Routes>
+        ;
       </>
     );
 }

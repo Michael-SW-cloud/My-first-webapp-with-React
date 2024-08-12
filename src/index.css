@@ -45,3 +45,17 @@ background-color: white;
   font-style:bold;
   font-size: 20px;
 }
+
+.div-nav-element{
+  font-style: bold;
+  color: darkkhaki;
+  font-size: 30px;
+}
+
+.set-collor-background{
+  width: 300px;
+  height: 100px;
+  font-style: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
