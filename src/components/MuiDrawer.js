@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import Settings from "./Settings";
 import { useState } from "react";
 const MuiDrawer = () => {
+ let bodyBackgroundColor = document.body.style.backgroundColor;
     const [isDrwaerOpen,setIsDrwerOpen] =useState(false)
     return (
       <>
@@ -27,13 +28,17 @@ const MuiDrawer = () => {
               <Link to="/">Dashboard</Link>
             </div>
             <div className="div-nav-element">
-              <Link to="/Setting"> Settings</Link>
+              <Link to="/Setting">Settings</Link>
             </div>
           </Box>
         </Drawer>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Setting" element={<Settings />} />
+
+          <Route
+            path="/Setting"
+            element={<Settings text={bodyBackgroundColor} />}
+          />
         </Routes>
         ;
       </>
